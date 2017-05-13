@@ -7,6 +7,7 @@ Vagrant.configure(2) do |config|
   # config.vm.box_check_update = false
   
   config.vm.network "forwarded_port", guest: 8888, host: 9191
+  config.vm.network "forwarded_port", guest: 6006, host: 6006
   # config.vm.network "private_network", ip: "192.168.33.10"
 
   config.vm.provider "virtualbox" do |tf|
@@ -37,7 +38,8 @@ $installation_script = <<SCRIPT
   sudo pip3 install numpy pillow scipy matplotlib ipython jupyter virtualenv scikit-learn Pandas scrapy NLTK Seaborn bokeh NetworkX
   
   # install tensorflow
-  export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.11.0-cp34-cp34m-linux_x86_64.whl
+  # export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-0.11.0-cp34-cp34m-linux_x86_64.whl
+  export TF_BINARY_URL=https://storage.googleapis.com/tensorflow/linux/cpu/tensorflow-1.1.0-cp34-cp34m-linux_x86_64.whl
   sudo pip3 install --upgrade $TF_BINARY_URL
     
   # supervisor configuration and restart
