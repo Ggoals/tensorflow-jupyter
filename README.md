@@ -25,7 +25,7 @@ url의 맨끝에 토큰이 있습니다.
 
 - python3(and pip)
 - supervisor
-- [tensorflow](https://www.tensorflow.org/) 0.11
+- [tensorflow](https://www.tensorflow.org/) 1.1
 
 # License
 MIT
